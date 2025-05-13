@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UFV_Conversor.Converter">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Margin="0,20"
+            Spacing="25">
+            
+            <Frame BackgroundColor="#fff"
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill"
+                Padding="40,20">
+
+                <Grid ColumnDefinitions="Auto,*">
+                    
+                    <Image Grid.Column="0"
+                        Source="ufv_logo.png"
+                        HeightRequest="50"
+                        Aspect="AspectFit"
+                        SemanticProperties.Description="Logo for University Francisco de Vitoria" />
+                        
+                    <HorizontalStackLayout Grid.Column="1" 
+                        HorizontalOptions="End"
+                        Spacing="40" >
+
+                        <Label VerticalOptions="Center" FontSize="22" Text="Privacy Policy" TextColor="Black" />
+                        <Label VerticalOptions="Center" FontSize="22" Text="Exit" TextColor="Black" />
+                    </HorizontalStackLayout>
+                </Grid>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
