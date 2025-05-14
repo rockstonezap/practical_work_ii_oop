@@ -2,9 +2,9 @@ using Microsoft.Extensions.Logging;
 
 namespace UFV_Conversor {
 
-    public partial class PrivacyPolicy : ContentPage {
+    public partial class Recovery : ContentPage {
 
-        public PrivacyPolicy() {
+        public Recovery() {
             InitializeComponent();
         }
 

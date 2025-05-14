@@ -9,6 +9,7 @@
             Margin="0,20"
             Spacing="25">
             
+            <!-- Navigation -->
             <Frame BackgroundColor="#fff"
                 HorizontalOptions="Fill"
                 VerticalOptions="Fill"
@@ -42,6 +43,73 @@
                 </Grid>
             </Frame>
 
+            <!-- Header -->
+            <Frame BackgroundColor="{StaticResource AppHeader}"
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill"
+                Padding="50,60" >
+
+                <Label HorizontalOptions="Center" FontAttributes="Bold" VerticalOptions="Center" FontSize="60" Text="Converter" TextColor="White" />
+            </Frame>
+
+            <!-- Main Content -->
+            <Frame VerticalOptions="FillAndExpand"
+                BackgroundColor="#D3D3D3">  
+
+                <VerticalStackLayout Spacing="30"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center" >
+                    
+                    <VerticalStackLayout Spacing="20">
+                        <Label Text="Username"
+                            FontSize="36"
+                            WidthRequest="400" />
+
+                        <Entry x:Name="userName"
+                            FontSize="26"
+                            BackgroundColor="White"
+                            TextColor="Black"
+                            HeightRequest="70"
+                            WidthRequest="400"
+                            Placeholder="Type your name here" />
+                    </VerticalStackLayout>
+                    
+                    <VerticalStackLayout Spacing="20">
+                        <Label Text="Password"
+                            FontSize="36"
+                            WidthRequest="400" />
+
+                        <Entry x:Name="userPassword"
+                            FontSize="26"
+                            BackgroundColor="White"
+                            TextColor="Black"
+                            HeightRequest="70"
+                            WidthRequest="400"
+                            Placeholder="Type your name here" />
+                    </VerticalStackLayout>
+                    
+                    <Button 
+                        Text="Forgot Password?"
+                        BackgroundColor="Transparent"
+                        TextColor="Blue"
+                        FontSize="26"
+                        HorizontalOptions="End"
+                        Padding="0"
+                        Clicked="GoToRecovery" />
+
+                    <Button x:Name="LoginBtn"
+                        Text="SIGN IN"
+                        FontSize="36"
+                        WidthRequest="260"
+                        BackgroundColor="#B0B0B0"
+                        FontFamily="OpenSansBold"
+                        TextColor="#fff"
+                        BorderWidth="2"
+                        BorderColor="{StaticResource Gray200}"
+                        HorizontalOptions="Center"
+                        Clicked="ExecuteLogin" />
+                </VerticalStackLayout>
+            </Frame>
         </VerticalStackLayout>
     </ScrollView>
 

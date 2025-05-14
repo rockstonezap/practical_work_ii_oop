@@ -27,4 +27,9 @@
     <ShellContent
         Title="Converter"
         ContentTemplate="{DataTemplate local:Converter}" />
+        
+    <ShellContent
+        Title="Recovery"
+        ContentTemplate="{DataTemplate local:Recovery}" />
+
 </Shell>

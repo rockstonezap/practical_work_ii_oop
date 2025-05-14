@@ -7,9 +7,13 @@ public partial class AppShell : Shell
 		InitializeComponent();
 
 		// Registering Routes
+
+		Routing.RegisterRoute("Homepage", typeof(MainPage));
 		Routing.RegisterRoute("PrivacyPolicy", typeof(PrivacyPolicy));
 		Routing.RegisterRoute("Register", typeof(Register));
 		Routing.RegisterRoute("Login", typeof(Login));
 		Routing.RegisterRoute("Converter", typeof(Converter));
+
+		// TODO: Add route for forgot password
 	}
 }
