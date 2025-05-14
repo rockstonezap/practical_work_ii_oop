@@ -13,8 +13,11 @@ public partial class Login : ContentPage {
     }
 
     private async void ExecuteLogin(object sender, EventArgs e) {
-        await Task.Delay(2000);
+
+        await Task.Delay(1000);
+        await Shell.Current.GoToAsync("Converter");
     }
+
     private async void GoToRecovery(object sender, EventArgs e) {
         await Shell.Current.GoToAsync("Recovery");
     }

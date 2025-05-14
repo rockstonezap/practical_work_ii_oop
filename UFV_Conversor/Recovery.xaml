@@ -9,6 +9,7 @@
             Margin="0,20"
             Spacing="25">
             
+            <!-- Navigation -->
             <Frame BackgroundColor="#fff"
                 HorizontalOptions="Fill"
                 VerticalOptions="Fill"
@@ -16,8 +17,7 @@
 
                 <Grid ColumnDefinitions="Auto,*">
                     
-                    <Image Grid.Column="0"
-                        Source="ufv_logo.png"
+                    <Image Source="ufv_logo.png"
                         HeightRequest="50"
                         Aspect="AspectFit"
                         SemanticProperties.Description="Logo for University Francisco de Vitoria" />
@@ -40,6 +40,15 @@
                     </HorizontalStackLayout>
 
                 </Grid>
+            </Frame>
+
+            <!-- Header -->
+            <Frame BackgroundColor="{StaticResource AppHeader}"
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill"
+                Padding="50,60" >
+
+                <Label HorizontalOptions="Center" FontAttributes="Bold" VerticalOptions="Center" FontSize="60" Text="Converter" TextColor="White" />
             </Frame>
 
         </VerticalStackLayout>

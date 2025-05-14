@@ -9,15 +9,15 @@
             Margin="0,20"
             Spacing="25">
             
+            <!-- Navigation -->
             <Frame BackgroundColor="#fff"
                 HorizontalOptions="Fill"
                 VerticalOptions="Fill"
                 Padding="40,20">
-
+                
                 <Grid ColumnDefinitions="Auto,*">
                     
-                    <Image Grid.Column="0"
-                        Source="ufv_logo.png"
+                    <Image Source="ufv_logo.png"
                         HeightRequest="50"
                         Aspect="AspectFit"
                         SemanticProperties.Description="Logo for University Francisco de Vitoria" />
@@ -52,75 +52,111 @@
             </Frame>
 
             <!-- Main Content -->
-            <Grid>
-                <Frame BackgroundColor="#D3D3D3">  
-                    <VerticalStackLayout Spacing="30"
-                        VerticalOptions="Center"
-                        HorizontalOptions="Center" >
-                        
-                        <!-- Username -->
-                        <VerticalStackLayout Spacing="20">
-                            <Label Text="Username"
-                                FontSize="36"
-                                WidthRequest="400" />
-
-                            <Entry x:Name="userName"
-                                FontSize="26"
-                                BackgroundColor="White"
-                                TextColor="Black"
-                                HeightRequest="70"
-                                WidthRequest="400"
-                                Placeholder="Type your name here" />
-                        </VerticalStackLayout>
-                        
-                        <!-- Password -->
-                        <VerticalStackLayout Spacing="20">
-                            <Label Text="Password"
-                                FontSize="36"
-                                WidthRequest="400" />
-
-                            <Entry x:Name="userPassword"
-                                FontSize="26"
-                                BackgroundColor="White"
-                                TextColor="Black"
-                                HeightRequest="70"
-                                WidthRequest="400"
-                                Placeholder="Type your password here" />
-                        </VerticalStackLayout>
-                        
-                        <!-- Confirm Password -->
-                        <VerticalStackLayout Spacing="20">
-                            <Label Text="Confirm Password"
-                                FontSize="36"
-                                WidthRequest="400" />
-
-                            <Entry x:Name="passConfirmation"
-                                FontSize="26"
-                                BackgroundColor="White"
-                                TextColor="Black"
-                                HeightRequest="70"
-                                WidthRequest="400"
-                                Placeholder="Type your password here" />
-                        </VerticalStackLayout>
-
-                        <!-- Sign Up Button -->
-                        <Button x:Name="LoginBtn"
-                            Text="SIGN UP"
+            <Frame BackgroundColor="#D3D3D3" Padding="0,50">  
+                <VerticalStackLayout Spacing="30"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center" >
+                    
+                    <!-- Name -->
+                    <VerticalStackLayout Spacing="20">
+                        <Label Text="Name"
                             FontSize="36"
-                            WidthRequest="260"
-                            BackgroundColor="#B0B0B0"
-                            FontFamily="OpenSansBold"
-                            TextColor="#fff"
-                            BorderWidth="2"
-                            BorderColor="{StaticResource Gray200}"
-                            HorizontalOptions="Center"
-                            Clicked="GoToLogin" />
+                            WidthRequest="600" />
 
+                        <Entry x:Name="name"
+                            FontSize="26"
+                            BackgroundColor="White"
+                            TextColor="Black"
+                            HeightRequest="70"
+                            WidthRequest="600"
+                            Placeholder="Type your name here" />
                     </VerticalStackLayout>
-                </Frame>
-            </Grid>
 
+                    <!-- Username -->
+                    <VerticalStackLayout Spacing="20">
+                        <Label Text="Username"
+                            FontSize="36"
+                            WidthRequest="600" />
+
+                        <Entry x:Name="userName"
+                            FontSize="26"
+                            BackgroundColor="White"
+                            TextColor="Black"
+                            HeightRequest="70"
+                            WidthRequest="600"
+                            Placeholder="Type your username here" />
+                    </VerticalStackLayout>
+                    
+                    <!-- Email -->
+                    <VerticalStackLayout Spacing="20">
+                        <Label Text="Email"
+                            FontSize="36"
+                            WidthRequest="600" />
+
+                        <Entry x:Name="userEmail"
+                            FontSize="26"
+                            Keyboard="Email"
+                            BackgroundColor="White"
+                            TextColor="Black"
+                            HeightRequest="70"
+                            WidthRequest="600"
+                            Placeholder="Type your email here" />
+                    </VerticalStackLayout>
+
+                    <!-- Password -->
+                    <VerticalStackLayout Spacing="20">
+                        <Label Text="Password"
+                            FontSize="36"
+                            WidthRequest="600" />
+
+                        <Entry x:Name="userPassword"
+                            FontSize="26"
+                            BackgroundColor="White"
+                            TextColor="Black"
+                            HeightRequest="70"
+                            WidthRequest="600"
+                            Placeholder="Type your password here" />
+                    </VerticalStackLayout>
+                    
+                    <!-- Confirm Password -->
+                    <VerticalStackLayout Spacing="20">
+                        <Label Text="Confirm Password"
+                            FontSize="36"
+                            WidthRequest="600" />
+
+                        <Entry x:Name="passConfirmation"
+                            FontSize="26"
+                            BackgroundColor="White"
+                            TextColor="Black"
+                            HeightRequest="70"
+                            WidthRequest="600"
+                            Placeholder="Type your password here" />
+                    </VerticalStackLayout>
+
+                    <!-- Privacy Policy Check -->
+                    <HorizontalStackLayout Spacing="10">
+
+                        <Label FontSize="20" 
+                            Text="To use our service, please accept our Privacy Policy" 
+                            VerticalOptions="Center" />
+
+                        <CheckBox x:Name="privacyPolicyBox"
+                            Color="Blue" />
+                    </HorizontalStackLayout>
+
+                    <!-- Sign Up Button -->
+                    <Button x:Name="LoginBtn"
+                        Text="SIGN UP"
+                        FontSize="36"
+                        WidthRequest="260"
+                        BackgroundColor="#B0B0B0"
+                        FontFamily="OpenSansBold"
+                        TextColor="#fff"
+                        HorizontalOptions="Center"
+                        Clicked="GoToLogin" />
+
+                </VerticalStackLayout>
+            </Frame>
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>

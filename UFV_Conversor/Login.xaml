@@ -17,8 +17,7 @@
 
                 <Grid ColumnDefinitions="Auto,*">
                     
-                    <Image Grid.Column="0"
-                        Source="ufv_logo.png"
+                    <Image Source="ufv_logo.png"
                         HeightRequest="50"
                         Aspect="AspectFit"
                         SemanticProperties.Description="Logo for University Francisco de Vitoria" />
@@ -53,13 +52,13 @@
             </Frame>
 
             <!-- Main Content -->
-            <Frame VerticalOptions="FillAndExpand"
-                BackgroundColor="#D3D3D3">  
+            <Frame BackgroundColor="#D3D3D3" Padding="0,50">  
 
                 <VerticalStackLayout Spacing="30"
                     VerticalOptions="Center"
                     HorizontalOptions="Center" >
                     
+                    <!-- Username -->
                     <VerticalStackLayout Spacing="20">
                         <Label Text="Username"
                             FontSize="36"
@@ -71,9 +70,10 @@
                             TextColor="Black"
                             HeightRequest="70"
                             WidthRequest="400"
-                            Placeholder="Type your name here" />
+                            Placeholder="Type your username here" />
                     </VerticalStackLayout>
                     
+                    <!-- Password -->
                     <VerticalStackLayout Spacing="20">
                         <Label Text="Password"
                             FontSize="36"
@@ -85,9 +85,10 @@
                             TextColor="Black"
                             HeightRequest="70"
                             WidthRequest="400"
-                            Placeholder="Type your name here" />
+                            Placeholder="Type your password here" />
                     </VerticalStackLayout>
                     
+                    <!-- Forgot Password Button -->
                     <Button 
                         Text="Forgot Password?"
                         BackgroundColor="Transparent"
@@ -97,6 +98,7 @@
                         Padding="0"
                         Clicked="GoToRecovery" />
 
+                    <!-- Login Button -->
                     <Button x:Name="LoginBtn"
                         Text="SIGN IN"
                         FontSize="36"
@@ -104,13 +106,10 @@
                         BackgroundColor="#B0B0B0"
                         FontFamily="OpenSansBold"
                         TextColor="#fff"
-                        BorderWidth="2"
-                        BorderColor="{StaticResource Gray200}"
                         HorizontalOptions="Center"
                         Clicked="ExecuteLogin" />
                 </VerticalStackLayout>
             </Frame>
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>
