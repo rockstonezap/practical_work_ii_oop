@@ -7,5 +7,15 @@ namespace UFV_Conversor {
         public PrivacyPolicy() {
             InitializeComponent();
         }
+
+        private async void ReturnToHomepage(object sender, EventArgs e) {
+            await Shell.Current.GoToAsync("MainPage");
+        }
+        
+        private void Exit(object sender, EventArgs e) {
+            if (App.Current != null) {
+                Application.Current.Quit();
+            }
+        }
     }
 }

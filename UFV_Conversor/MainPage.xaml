@@ -26,9 +26,19 @@
                         HorizontalOptions="End"
                         Spacing="40" >
 
-                        <Label VerticalOptions="Center" FontSize="22" Text="Privacy Policy" TextColor="Black" />
-                        <Label VerticalOptions="Center" FontSize="22" Text="Exit" TextColor="Black" />
+                        <Label VerticalOptions="Center" FontSize="22" Text="Privacy Policy" TextColor="Black">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="GoToPrivacyPolicy" />
+                            </Label.GestureRecognizers>
+                        </Label>
+
+                        <Label VerticalOptions="Center" FontSize="22" Text="Exit" TextColor="Black">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Exit" />
+                            </Label.GestureRecognizers>
+                        </Label>
                     </HorizontalStackLayout>
+                    
                 </Grid>
             </Frame>
 
@@ -56,7 +66,8 @@
                         TextColor="#fff"
                         BorderWidth="2"
                         BorderColor="{StaticResource Gray200}"
-                        HorizontalOptions="Center" />
+                        HorizontalOptions="Center"
+                        Clicked="GoToRegister" />
 
                     <Button x:Name="LoginBtn"
                         Text="SIGN IN"
@@ -67,7 +78,8 @@
                         TextColor="#fff"
                         BorderWidth="2"
                         BorderColor="{StaticResource Gray200}"
-                        HorizontalOptions="Center" />
+                        HorizontalOptions="Center"
+                        Clicked="GoToLogin" />
                 </VerticalStackLayout>
             </Frame>
 

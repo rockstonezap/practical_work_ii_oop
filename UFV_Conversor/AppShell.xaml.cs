@@ -7,7 +7,7 @@ public partial class AppShell : Shell
 		InitializeComponent();
 
 		// Registering Routes
-		Routing.RegisterRoute("Privacy Policy", typeof(PrivacyPolicy));
+		Routing.RegisterRoute("PrivacyPolicy", typeof(PrivacyPolicy));
 		Routing.RegisterRoute("Register", typeof(Register));
 		Routing.RegisterRoute("Login", typeof(Login));
 		Routing.RegisterRoute("Converter", typeof(Converter));

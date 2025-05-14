@@ -21,14 +21,36 @@
                         HeightRequest="50"
                         Aspect="AspectFit"
                         SemanticProperties.Description="Logo for University Francisco de Vitoria" />
-                        
+                    
                     <HorizontalStackLayout Grid.Column="1" 
                         HorizontalOptions="End"
                         Spacing="40" >
 
-                        <Label VerticalOptions="Center" FontSize="22" Text="Privacy Policy" TextColor="Black" />
-                        <Label VerticalOptions="Center" FontSize="22" Text="Exit" TextColor="Black" />
+                        <Label VerticalOptions="Center" FontSize="22" Text="Privacy Policy" TextColor="Black">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="GoToPrivacyPolicy" />
+                            </Label.GestureRecognizers>
+                        </Label>
+
+                        <Label VerticalOptions="Center" FontSize="22" Text="Operations" TextColor="Black">
+                            <!-- <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Operations" />
+                            </Label.GestureRecognizers> -->
+                        </Label>
+
+                        <Label VerticalOptions="Center" FontSize="22" Text="Logout" TextColor="Black">
+                            <!-- <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Logout" />
+                            </Label.GestureRecognizers> -->
+                        </Label>
+
+                        <Label VerticalOptions="Center" FontSize="22" Text="Exit" TextColor="Black">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Exit" />
+                            </Label.GestureRecognizers>
+                        </Label>
                     </HorizontalStackLayout>
+
                 </Grid>
             </Frame>
 
