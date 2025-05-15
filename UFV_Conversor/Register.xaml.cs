@@ -80,7 +80,7 @@ public partial class Register : ContentPage
 
                 else if (char.IsDigit(c))
                     hasDigit = true;
-                    
+
                 else
                     hasSpecial = true;
             }
@@ -104,6 +104,8 @@ public partial class Register : ContentPage
             await DisplayAlert("Saved To", filePath, "OK"); 
             */
 
+            await DisplayAlert("User Registration: ", $"User registration of {username} was successful", "OK");
+            
             await Shell.Current.GoToAsync("Login");
         }
         catch (ValidationException ex)

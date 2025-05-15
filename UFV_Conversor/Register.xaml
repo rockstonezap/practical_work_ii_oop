@@ -68,8 +68,7 @@
                             BackgroundColor="White"
                             TextColor="Black"
                             HeightRequest="70"
-                            WidthRequest="600"
-                            Placeholder="Type your name here" />
+                            WidthRequest="600" />
                     </VerticalStackLayout>
 
                     <!-- Username -->
@@ -83,8 +82,7 @@
                             BackgroundColor="White"
                             TextColor="Black"
                             HeightRequest="70"
-                            WidthRequest="600"
-                            Placeholder="Type your username here" />
+                            WidthRequest="600" />
                     </VerticalStackLayout>
                     
                     <!-- Email -->
@@ -99,8 +97,7 @@
                             BackgroundColor="White"
                             TextColor="Black"
                             HeightRequest="70"
-                            WidthRequest="600"
-                            Placeholder="Type your email here" />
+                            WidthRequest="600" />
                     </VerticalStackLayout>
 
                     <!-- Password -->
@@ -111,11 +108,11 @@
 
                         <Entry x:Name="userPasswordEntry"
                             FontSize="26"
+                            IsPassword="True"
                             BackgroundColor="White"
                             TextColor="Black"
                             HeightRequest="70"
-                            WidthRequest="600"
-                            Placeholder="Type your password here" />
+                            WidthRequest="600" />
                     </VerticalStackLayout>
                     
                     <!-- Confirm Password -->
@@ -126,11 +123,11 @@
 
                         <Entry x:Name="passConfirmEntry"
                             FontSize="26"
+                            IsPassword="True"
                             BackgroundColor="White"
                             TextColor="Black"
                             HeightRequest="70"
-                            WidthRequest="600"
-                            Placeholder="Type your password here" />
+                            WidthRequest="600" />
                     </VerticalStackLayout>
 
                     <!-- Privacy Policy Check -->
