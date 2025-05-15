@@ -63,7 +63,7 @@
                             FontSize="36"
                             WidthRequest="600" />
 
-                        <Entry x:Name="name"
+                        <Entry x:Name="nameEntry"
                             FontSize="26"
                             BackgroundColor="White"
                             TextColor="Black"
@@ -78,7 +78,7 @@
                             FontSize="36"
                             WidthRequest="600" />
 
-                        <Entry x:Name="userName"
+                        <Entry x:Name="userNameEntry"
                             FontSize="26"
                             BackgroundColor="White"
                             TextColor="Black"
@@ -93,7 +93,7 @@
                             FontSize="36"
                             WidthRequest="600" />
 
-                        <Entry x:Name="userEmail"
+                        <Entry x:Name="userEmailEntry"
                             FontSize="26"
                             Keyboard="Email"
                             BackgroundColor="White"
@@ -109,7 +109,7 @@
                             FontSize="36"
                             WidthRequest="600" />
 
-                        <Entry x:Name="userPassword"
+                        <Entry x:Name="userPasswordEntry"
                             FontSize="26"
                             BackgroundColor="White"
                             TextColor="Black"
@@ -124,7 +124,7 @@
                             FontSize="36"
                             WidthRequest="600" />
 
-                        <Entry x:Name="passConfirmation"
+                        <Entry x:Name="passConfirmEntry"
                             FontSize="26"
                             BackgroundColor="White"
                             TextColor="Black"
@@ -153,7 +153,7 @@
                         FontFamily="OpenSansBold"
                         TextColor="#fff"
                         HorizontalOptions="Center"
-                        Clicked="GoToLogin" />
+                        Clicked="RegisterUser" />
 
                 </VerticalStackLayout>
             </Frame>
