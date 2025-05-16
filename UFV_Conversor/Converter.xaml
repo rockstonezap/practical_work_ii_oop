@@ -65,7 +65,7 @@
             </Frame>
 
             <!-- Main Content -->
-            <Frame BackgroundColor="#D3D3D3" Padding="0,50">  
+            <Frame BackgroundColor="#D3D3D3" Padding="20,50">  
                 <VerticalStackLayout Spacing="30">
                     
                     <!-- User Input -->

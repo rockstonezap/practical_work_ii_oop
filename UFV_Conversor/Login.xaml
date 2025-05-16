@@ -64,7 +64,7 @@
                             FontSize="36"
                             WidthRequest="400" />
 
-                        <Entry x:Name="userName"
+                        <Entry x:Name="loginUsername"
                             FontSize="26"
                             BackgroundColor="White"
                             TextColor="Black"
@@ -79,7 +79,7 @@
                             FontSize="36"
                             WidthRequest="400" />
 
-                        <Entry x:Name="userPassword"
+                        <Entry x:Name="loginPassword"
                             FontSize="26"
                             BackgroundColor="White"
                             TextColor="Black"

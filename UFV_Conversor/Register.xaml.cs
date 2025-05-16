@@ -1,6 +1,4 @@
-using Microsoft.Extensions.Logging;
 using System.ComponentModel.DataAnnotations;
-using System.IO;
 
 namespace UFV_Conversor;
 
@@ -105,7 +103,7 @@ public partial class Register : ContentPage
             */
 
             await DisplayAlert("User Registration: ", $"User registration of {username} was successful", "OK");
-            
+
             await Shell.Current.GoToAsync("Login");
         }
         catch (ValidationException ex)
