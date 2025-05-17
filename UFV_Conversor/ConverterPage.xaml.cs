@@ -2,14 +2,23 @@ namespace UFV_Conversor;
 
 public partial class ConverterPage : ContentPage
 {
-    protected ConverterProcess converterProcess;
+    private List<Conversion> operations;
 
     public ConverterPage()
     {
         InitializeComponent();
 
-        converterProcess = new ConverterProcess();
-    }
+        this.operations = new List<Conversion>();
+
+        this.operations.Add(new DecimalToBinary("Binary", "Decimal to binary"));
+        this.operations.Add(new DecimalToOctal("Octal", "Decimal to octal"));
+        this.operations.Add(new DecimalToHexadecimal("Hexadecimal", "Decimal to hexadecimal"));
+        this.operations.Add(new DecimalToTwoComplement("TwoComplement", "Decimal to binary (2Complement)"));
+        this.operations.Add(new BinaryToDecimal("Decimal", "Binary to Decimal"));
+        this.operations.Add(new TwoComplementToDecimal("Decimal", "Binary (TwoComplement) to Decimal"));
+        this.operations.Add(new OctalToDecimal("Decimal", "Octal to Decimal"));
+        this.operations.Add(new HexadecimalToDecimal("Decimal", "Hexadecimal to Decimal"));
+    }  
 
     private async void GoToPrivacyPolicy(object sender, EventArgs e)
     {
@@ -80,11 +89,46 @@ public partial class ConverterPage : ContentPage
         userInput.Text = "";
     }
 
-    private async void PerformConversion(int op, string input)
+    private void PerformConversion(object sender, EventArgs e)
     {
-        string output = converterProcess.PerformConversion(op, input);
+        if (sender is Button button && button.CommandParameter is string op)
+            PerformConversion(Convert.ToInt16(op));
+    }
 
-        await DisplayAlert("Output: ", output, "OK");
+    private async void PerformConversion(int op)
+    {
+        string input = userInput.Text ?? "";
+        try
+        {
+            if (input == "")
+            {
+                throw new FormatException("Please introduce a number to convert. Input cannot be null");
+            }
+
+            this.operations[op].Validate(input);
+
+            string output;
+
+            output = this.operations[op].Change(input);
+
+            await DisplayAlert(this.operations[op].GetName() + ": ", $"{input} ==> {output}", "OK");
+
+        }
+        catch (ArgumentOutOfRangeException ex)
+        {
+            await DisplayAlert("Input Length Error: ", ex.Message, "OK");
+            userInput.Text = "";
+        }
+        catch (FormatException ex)
+        {
+            await DisplayAlert("Bad Format: ", ex.Message, "OK");
+            userInput.Text = "";
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Error", ex.GetType().Name + ": " + ex.Message, "OK");
+            userInput.Text = "";
+        }
     }
 
     private void Exit(object sender, EventArgs e)

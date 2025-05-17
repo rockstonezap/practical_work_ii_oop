@@ -17,19 +17,4 @@ public class DecimalToBinary : Conversion {
 
         return binaryString;
     }
-
-    public override string Change(string input, int bits) {
-
-        string binaryString = this.Change(input);
-
-        if (binaryString.Length > bits) {
-            throw new ArgumentOutOfRangeException(nameof(input), $"Number must fit within {bits} bits.");
-        }
-
-        if (binaryString.Length < bits) {
-            binaryString = binaryString.PadLeft(bits,'0');
-        }
-
-        return binaryString;
-    }
 }

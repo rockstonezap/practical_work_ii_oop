@@ -16,7 +16,7 @@ public class HexadecimalInputValidator : InputValidator
 
             if (!isDigit && !isUpperHex && !isLowerHex)
             {
-                throw new FormatException("Bad format: input is not a valid hexadecimal number.");
+                throw new FormatException("Input is not a valid hexadecimal number.");
             }
         }
     }

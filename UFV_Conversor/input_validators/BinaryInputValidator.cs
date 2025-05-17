@@ -7,7 +7,7 @@ public class BinaryInputValidator : InputValidator {
         for (int i = 0; i < input.Length; i++) {
 
             if (input[i] != '0' && input[i] != '1') {
-                throw new FormatException("Bad format: input is not a valid binary number.");
+                throw new FormatException("Input is not a valid binary number.");
             }
         }
     }

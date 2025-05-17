@@ -8,7 +8,7 @@ public class OctalInputValidator : InputValidator
         {
             if (!(input[i] >= '0' && input[i] <= '7'))
             {
-                throw new FormatException("Bad format: input is not a valid octal number.");
+                throw new FormatException("Input is not a valid octal number.");
             }
         }
     }

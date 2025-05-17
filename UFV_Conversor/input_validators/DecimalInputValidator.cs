@@ -10,7 +10,7 @@ public class DecimalInputValidator : InputValidator
 
             if (input[i] != '-' && !char.IsDigit(input[i]))
             {
-                throw new FormatException("Bad format: input is not a valid integer.");
+                throw new FormatException("Input is not a valid integer.");
             }
         }
     }

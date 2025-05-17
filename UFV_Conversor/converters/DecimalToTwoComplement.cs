@@ -28,23 +28,4 @@ public class DecimalToTwoComplement : Conversion {
     
         return binaryString;
     }
-
-    public override string Change(string input, int bits) {
-
-        int number = Int32.Parse(input);
-        string binaryString = "";
-        
-        int minVal = -(1 << (bits - 1)); // min number
-        int maxVal = (1 << (bits - 1)) - 1; // max number
-
-        if (number < minVal || number > maxVal)
-            throw new ArgumentOutOfRangeException(nameof(number), $"Number must fit within {bits} bits.");
-        
-        // Left Side: Change into bit representation, Right Side: get max uint and substract 1, then with &, keep ones from number and leave rest as 0
-        uint unsignedValue = (uint) number & ((1u << bits) - 1);
-
-        binaryString = Convert.ToString(unsignedValue, 2).PadLeft(bits, '0');
-    
-        return binaryString;
-    }
 }
