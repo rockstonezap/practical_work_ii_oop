@@ -213,6 +213,7 @@
                                     BackgroundColor="#A9A9A9"
                                     FontFamily="OpenSans"
                                     TextColor="#000"
+                                    Clicked="ClearUserInput"
                                     HorizontalOptions="Center" />
                                 
                                 <Button x:Name="key0"
@@ -235,6 +236,7 @@
                                     BackgroundColor="#A9A9A9"
                                     FontFamily="OpenSans"
                                     TextColor="#000"
+                                    Clicked="PerformNegation"
                                     HorizontalOptions="Center" />
                             </Grid>
 

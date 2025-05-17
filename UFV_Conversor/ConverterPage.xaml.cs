@@ -46,6 +46,40 @@ public partial class ConverterPage : ContentPage
         }
     }
 
+    private async void PerformNegation(object sender, EventArgs e)
+    {
+        string input = userInput.Text ?? "";
+
+        try
+        {
+            if (input.Any(char.IsLetter))
+            {
+                throw new FormatException("Cannot make negative a hexadecimal number");
+            }
+            else if (input == "")
+            {
+                throw new FormatException("User Input is empty. Add a number to input to negate");
+            }
+
+            int number = int.Parse(input);
+
+            userInput.Text = Convert.ToString(number * -1);
+        }
+        catch (FormatException ex)
+        {
+            await DisplayAlert("Format Error: ", ex.Message, "OK");
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Error", ex.GetType().Name + ": " + ex.Message, "OK");
+        }
+    }
+
+    private void ClearUserInput(object sender, EventArgs e)
+    {
+        userInput.Text = "";
+    }
+
     private async void PerformConversion(int op, string input)
     {
         string output = converterProcess.PerformConversion(op, input);
