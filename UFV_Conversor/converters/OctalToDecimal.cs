@@ -1,0 +1,23 @@
+namespace UFV_Conversor;
+
+public class OctalToDecimal : Conversion {
+    
+    public OctalToDecimal(string name, string definition) : base(name, definition, new OctalInputValidator()) {}
+
+    public override string Change(string input) {
+
+        int decimalNumber = 0;
+        int length = input.Length;
+
+        for (int i = 0; i < length; i++) {
+
+            char digitChar = input[i];
+            int digit = digitChar - '0';
+            int power = length - i - 1;
+
+            decimalNumber += digit * (int) Math.Pow(8,power);
+        }
+
+        return decimalNumber.ToString();
+    }
+}

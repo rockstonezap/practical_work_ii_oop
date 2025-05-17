@@ -41,7 +41,7 @@ public partial class Login : ContentPage {
             }
 
             if (found)
-                await Shell.Current.GoToAsync("Converter");
+                await Shell.Current.GoToAsync("ConverterPage");
             else
                 throw new ValidationException("Validation Failed: Please verify if your username or password are correct");
 

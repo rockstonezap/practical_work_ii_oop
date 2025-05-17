@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="UFV_Conversor.Converter">
+             x:Class="UFV_Conversor.ConverterPage">
 
     <ScrollView>
         <VerticalStackLayout
@@ -71,7 +71,7 @@
                     <!-- User Input -->
                     <Grid ColumnDefinitions="*">
 
-                        <Entry x:Name="Input"
+                        <Entry x:Name="userInput"
                             FlowDirection="RightToLeft"
                             HorizontalOptions="Fill"
                             FontSize="26"
@@ -96,6 +96,8 @@
                                     BackgroundColor="#A9A9A9"
                                     FontFamily="OpenSans"
                                     TextColor="#000"
+                                    Clicked="AddNewElement"
+                                    CommandParameter="7"
                                     HorizontalOptions="Center" />
                                 
                                 <Button x:Name="key8"
@@ -106,6 +108,8 @@
                                     BackgroundColor="#A9A9A9"
                                     FontFamily="OpenSans"
                                     TextColor="#000"
+                                    Clicked="AddNewElement"
+                                    CommandParameter="8"
                                     HorizontalOptions="Center" />
 
                                 <Button x:Name="key9"
@@ -116,6 +120,8 @@
                                     BackgroundColor="#A9A9A9"
                                     FontFamily="OpenSans"
                                     TextColor="#000"
+                                    Clicked="AddNewElement"
+                                    CommandParameter="9"
                                     HorizontalOptions="Center" />
                             </Grid>
 
@@ -129,6 +135,8 @@
                                     BackgroundColor="#A9A9A9"
                                     FontFamily="OpenSans"
                                     TextColor="#000"
+                                    Clicked="AddNewElement"
+                                    CommandParameter="4"
                                     HorizontalOptions="Center" />
                                 
                                 <Button x:Name="key5"
@@ -139,6 +147,8 @@
                                     BackgroundColor="#A9A9A9"
                                     FontFamily="OpenSans"
                                     TextColor="#000"
+                                    Clicked="AddNewElement"
+                                    CommandParameter="5"
                                     HorizontalOptions="Center" />
 
                                 <Button x:Name="key6"
@@ -149,6 +159,8 @@
                                     BackgroundColor="#A9A9A9"
                                     FontFamily="OpenSans"
                                     TextColor="#000"
+                                    Clicked="AddNewElement"
+                                    CommandParameter="6"
                                     HorizontalOptions="Center" />
                             </Grid>
 
@@ -162,6 +174,8 @@
                                     BackgroundColor="#A9A9A9"
                                     FontFamily="OpenSans"
                                     TextColor="#000"
+                                    Clicked="AddNewElement"
+                                    CommandParameter="1"
                                     HorizontalOptions="Center" />
                                 
                                 <Button x:Name="key2"
@@ -172,6 +186,8 @@
                                     BackgroundColor="#A9A9A9"
                                     FontFamily="OpenSans"
                                     TextColor="#000"
+                                    Clicked="AddNewElement"
+                                    CommandParameter="2"
                                     HorizontalOptions="Center" />
 
                                 <Button x:Name="key3"
@@ -182,6 +198,8 @@
                                     BackgroundColor="#A9A9A9"
                                     FontFamily="OpenSans"
                                     TextColor="#000"
+                                    Clicked="AddNewElement"
+                                    CommandParameter="3"
                                     HorizontalOptions="Center" />
                             </Grid>
 
@@ -205,6 +223,8 @@
                                     BackgroundColor="#A9A9A9"
                                     FontFamily="OpenSans"
                                     TextColor="#000"
+                                    Clicked="AddNewElement"
+                                    CommandParameter="0"
                                     HorizontalOptions="Center" />
 
                                 <Button x:Name="keyMinus"
@@ -230,6 +250,8 @@
                                     BackgroundColor="#A9A9A9"
                                     FontFamily="OpenSans"
                                     TextColor="#000"
+                                    Clicked="AddNewElement"
+                                    CommandParameter="A"
                                     HorizontalOptions="Center" />
                                 
                                 <Button x:Name="keyB"
@@ -240,6 +262,8 @@
                                     BackgroundColor="#A9A9A9"
                                     FontFamily="OpenSans"
                                     TextColor="#000"
+                                    Clicked="AddNewElement"
+                                    CommandParameter="B"
                                     HorizontalOptions="Center" />
 
                                 <Button x:Name="keyC"
@@ -250,6 +274,8 @@
                                     BackgroundColor="#A9A9A9"
                                     FontFamily="OpenSans"
                                     TextColor="#000"
+                                    Clicked="AddNewElement"
+                                    CommandParameter="C"
                                     HorizontalOptions="Center" />
                             </Grid>
 
@@ -263,6 +289,8 @@
                                     BackgroundColor="#A9A9A9"
                                     FontFamily="OpenSans"
                                     TextColor="#000"
+                                    Clicked="AddNewElement"
+                                    CommandParameter="D"
                                     HorizontalOptions="Center" />
                                 
                                 <Button x:Name="keyE"
@@ -273,6 +301,8 @@
                                     BackgroundColor="#A9A9A9"
                                     FontFamily="OpenSans"
                                     TextColor="#000"
+                                    Clicked="AddNewElement"
+                                    CommandParameter="E"
                                     HorizontalOptions="Center" />
 
                                 <Button x:Name="keyF"
@@ -283,6 +313,8 @@
                                     BackgroundColor="#A9A9A9"
                                     FontFamily="OpenSans"
                                     TextColor="#000"
+                                    Clicked="AddNewElement"
+                                    CommandParameter="F"
                                     HorizontalOptions="Center" />
                             </Grid>
 
