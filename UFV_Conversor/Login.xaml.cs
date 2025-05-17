@@ -4,7 +4,8 @@ namespace UFV_Conversor;
 
 public partial class Login : ContentPage {
 
-    public Login() {
+    public Login()
+    {
         InitializeComponent();
     }
 
@@ -28,7 +29,7 @@ public partial class Login : ContentPage {
 
             while ((line = reader.ReadLine()) != null && !found)
             {
-                // Order of Items: Name | Username | Email | Password NumberOperations
+                // Order of Items: Name | Username | Email | Password | NumberOperations
                 string[] accountData = line.Split(";");
 
                 string username = accountData[1];
@@ -37,6 +38,8 @@ public partial class Login : ContentPage {
                 if (username == inputUsername && password == inputPassword)
                 {
                     found = true;
+
+                    AppSession.CurrentUser = new User(accountData);
                 }
             }
 
@@ -55,8 +58,9 @@ public partial class Login : ContentPage {
             await DisplayAlert("Error", ex.GetType().Name + ": " + ex.Message, "OK");
         }
     }
-
-    private async void GoToRecovery(object sender, EventArgs e) {
+    
+    private async void GoToRecovery(object sender, EventArgs e)
+    {
         await Shell.Current.GoToAsync("Recovery");
     }
 

@@ -34,9 +34,9 @@
                         </Label>
 
                         <Label VerticalOptions="Center" FontSize="22" Text="Operations" TextColor="Black">
-                            <!-- <Label.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="Operations" />
-                            </Label.GestureRecognizers> -->
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="ShowUserInfo" />
+                            </Label.GestureRecognizers>
                         </Label>
 
                         <Label VerticalOptions="Center" FontSize="22" Text="Logout" TextColor="Black">

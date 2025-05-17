@@ -1,3 +1,5 @@
+using CommunityToolkit.Maui.Views;
+
 namespace UFV_Conversor;
 
 public partial class ConverterPage : ContentPage
@@ -18,7 +20,7 @@ public partial class ConverterPage : ContentPage
         this.operations.Add(new TwoComplementToDecimal("Decimal", "Binary (TwoComplement) to Decimal"));
         this.operations.Add(new OctalToDecimal("Decimal", "Octal to Decimal"));
         this.operations.Add(new HexadecimalToDecimal("Decimal", "Hexadecimal to Decimal"));
-    }  
+    }
 
     private async void GoToPrivacyPolicy(object sender, EventArgs e)
     {
@@ -129,6 +131,20 @@ public partial class ConverterPage : ContentPage
             await DisplayAlert("Error", ex.GetType().Name + ": " + ex.Message, "OK");
             userInput.Text = "";
         }
+    }
+
+    private async void ShowUserInfo(object sender, EventArgs e)
+    {
+        await Task.Delay(25);
+
+        // Passes current user data and if no current user, then just sets it to null and does not crash the runtime
+        string[] data = AppSession.CurrentUser?.UserData ?? Array.Empty<string>();
+
+        // Adds all data to popup "Page"
+        var popup = new OperationsPopup(data);
+
+        // Displays popup "Page"
+        this.ShowPopup(popup);
     }
 
     private void Exit(object sender, EventArgs e)

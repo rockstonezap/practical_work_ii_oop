@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup 
+    x:Class="UFV_Conversor.OperationsPopup"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit">
+    
+    <!-- Initial Styles pretty basic TODO: Modify to be to same standards as other pages -->
+    <Frame Padding="20" BackgroundColor="White" CornerRadius="12" WidthRequest="300">
+        <VerticalStackLayout Spacing="15">
+            <Label x:Name="Name" FontSize="20" FontAttributes="Bold" />
+            <Label x:Name="Username" FontSize="20" FontAttributes="Bold" />
+            <Label x:Name="Email" FontSize="20" FontAttributes="Bold" />
+            <Label x:Name="Password" FontSize="20" FontAttributes="Bold" />
+            <Label x:Name="NumberOperations" FontSize="20" FontAttributes="Bold" />
+            
+            <Button Text="Close" Clicked="ClosePopup" />
+        </VerticalStackLayout>
+    </Frame>
+</toolkit:Popup>
