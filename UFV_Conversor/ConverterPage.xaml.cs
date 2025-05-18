@@ -113,6 +113,13 @@ public partial class ConverterPage : ContentPage
 
             output = this.operations[op].Change(input);
 
+            int currentCount = Convert.ToInt16(AppSession.CurrentUser?.UserData[4]);
+
+            // Increment Operations Count by 1
+            // ! is to remove the warning, since I'm absolutely certain that value will never be null
+            var userData = AppSession.CurrentUser?.UserData;
+            userData![4] = Convert.ToString(currentCount + 1);
+
             await DisplayAlert(this.operations[op].GetName() + ": ", $"{input} ==> {output}", "OK");
 
         }

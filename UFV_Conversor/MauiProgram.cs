@@ -1,4 +1,5 @@
-﻿using CommunityToolkit.Maui;
+﻿using Microsoft.Extensions.Logging;
+using CommunityToolkit.Maui;
 
 namespace UFV_Conversor;
 
