@@ -157,6 +157,13 @@ public partial class ConverterPage : ContentPage
         this.ShowPopup(popup);
     }
 
+    private async void LogoutUser(object sender, EventArgs e)
+    {
+        AppSession.CurrentUser = new User(new string[5]);
+
+        await Shell.Current.GoToAsync("Homepage");
+    }
+    
     private void Exit(object sender, EventArgs e)
     {
         if (App.Current != null)

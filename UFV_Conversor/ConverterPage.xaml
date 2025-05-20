@@ -40,9 +40,9 @@
                         </Label>
 
                         <Label VerticalOptions="Center" FontSize="22" Text="Logout" TextColor="Black">
-                            <!-- <Label.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="Logout" />
-                            </Label.GestureRecognizers> -->
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="LogoutUser" />
+                            </Label.GestureRecognizers>
                         </Label>
 
                         <Label VerticalOptions="Center" FontSize="22" Text="Exit" TextColor="Black">
