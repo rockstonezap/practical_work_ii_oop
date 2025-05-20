@@ -4,6 +4,8 @@ namespace UFV_Conversor;
 
 public partial class Login : ContentPage {
 
+    private AccountsData Data = new AccountsData();
+
     public Login()
     {
         InitializeComponent();
@@ -13,35 +15,24 @@ public partial class Login : ContentPage {
         await Shell.Current.GoToAsync("PrivacyPolicy");
     }
 
+    private async void GoToResetPassword(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("ResetPassword");
+    }  
+
     private async void ExecuteLogin(object sender, EventArgs e)
     {
         string filePath = Path.Combine(FileSystem.AppDataDirectory, "Accounts/accounts.csv");
 
         try
         {
-            using StreamReader reader = new StreamReader(filePath);
-
-            string? line = "";
-
             string inputUsername = loginUsername.Text;
             string inputPassword = loginPassword.Text;
             bool found = false;
 
-            while ((line = reader.ReadLine()) != null && !found)
-            {
-                // Order of Items: Name | Username | Email | Password | NumberOperations
-                string[] accountData = line.Split(";");
+            string[] CurrentUserData = Data.SearchForUser(inputUsername, inputPassword, ref found);
 
-                string username = accountData[1];
-                string password = accountData[3];
-
-                if (username == inputUsername && password == inputPassword)
-                {
-                    found = true;
-
-                    AppSession.CurrentUser = new User(accountData);
-                }
-            }
+            AppSession.CurrentUser = new User(CurrentUserData);
 
             if (found)
                 await Shell.Current.GoToAsync("ConverterPage");

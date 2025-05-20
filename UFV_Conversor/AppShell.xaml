@@ -30,6 +30,6 @@
         
     <ShellContent
         Title="Recovery"
-        ContentTemplate="{DataTemplate local:Recovery}" />
+        ContentTemplate="{DataTemplate local:ResetPassword}" />
 
 </Shell>

@@ -4,6 +4,9 @@ namespace UFV_Conversor;
 
 public partial class Register : ContentPage
 {
+    private PasswordValidator passwordChecker = new PasswordValidator();
+    private AccountsData Data = new AccountsData();
+
     public Register()
     {
         InitializeComponent();
@@ -41,65 +44,20 @@ public partial class Register : ContentPage
 
         try
         {
-            int lengthPassword = password.Count();
-
             bool isChecked = privacyPolicyBox.IsChecked;
             string passwordConfirm = passConfirmEntry.Text;
 
             // Basic checkup on conditions for proper registration
             if (privacyPolicyBox.IsChecked == true)
                 throw new ValidationException("You must agree to the terms before continuing.");
-
             else if (name == username)
                 throw new FormatException("Name and username cannot be the same.");
-
             else if (password != passwordConfirm)
                 throw new FormatException("Password confirmation failed. Passwords must match.");
 
-            else if (lengthPassword < 8)
-                throw new FormatException("Password must be 8 characters or longer.");
+            passwordChecker.Validate(password);
 
-            // Check whether password has correct requirements. Requirements of at least 1 up, 1 low, 1 num and 1 special
-            bool hasUpper = false;
-            bool hasLower = false;
-            bool hasDigit = false;
-            bool hasSpecial = false;
-
-            for (int i = 0; i < lengthPassword; i++)
-            {
-                char c = password[i];
-
-                if (char.IsUpper(c))
-                    hasUpper = true;
-
-                else if (char.IsLower(c))
-                    hasLower = true;
-
-                else if (char.IsDigit(c))
-                    hasDigit = true;
-
-                else
-                    hasSpecial = true;
-            }
-
-            // If any of them is false, the condition is true
-            if (!(hasUpper && hasLower && hasDigit && hasSpecial))
-                throw new FormatException(
-                    "Password must include at least one uppercase letter, " +
-                    "one lowercase letter, one number, and one special character."
-                );
-
-            using StreamWriter writer = new StreamWriter(filePath, true);
-
-            writer.WriteLine(information);
-
-            /*
-            // Check where the user info was saved to
-            // Uncomment this section and test the program to get the path to accounts.csv
-            // If on macOS, in Finder use Cmd + Shift + G and then paste the path from this alert to the entry box
-
-            await DisplayAlert("Saved To", filePath, "OK"); 
-            */
+            Data.AddUser(information);
 
             await DisplayAlert("User Registration: ", $"User registration of {username} was successful", "OK");
 
@@ -121,7 +79,6 @@ public partial class Register : ContentPage
 
     private void Exit(object sender, EventArgs e)
     {
-
         if (App.Current != null)
         {
             Application.Current.Quit();
