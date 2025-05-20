@@ -5,16 +5,66 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit">
     
-    <!-- Initial Styles pretty basic TODO: Modify to be to same standards as other pages -->
-    <Frame Padding="20" BackgroundColor="White" CornerRadius="12" WidthRequest="300">
-        <VerticalStackLayout Spacing="15">
-            <Label x:Name="Name" FontSize="20" FontAttributes="Bold" />
-            <Label x:Name="Username" FontSize="20" FontAttributes="Bold" />
-            <Label x:Name="Email" FontSize="20" FontAttributes="Bold" />
-            <Label x:Name="Password" FontSize="20" FontAttributes="Bold" />
-            <Label x:Name="NumberOperations" FontSize="20" FontAttributes="Bold" />
-            
-            <Button Text="Close" Clicked="ClosePopup" />
-        </VerticalStackLayout>
-    </Frame>
+    <ScrollView>
+        <Frame BackgroundColor="#D3D3D3" 
+            CornerRadius="12" 
+            WidthRequest="800"
+            HorizontalOptions="Fill"
+            VerticalOptions="Fill"
+            Padding="40,40" >
+
+            <!-- User Information -->
+            <VerticalStackLayout Spacing="15">
+                <Frame Padding="30,10">
+                    <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="5">
+                        <Label Text="User Information" FontSize="38" FontAttributes="Bold" FontFamily="OpenSansBold" />
+                    </HorizontalStackLayout>
+                </Frame>
+                <Frame Background="#fff" CornerRadius="12" Padding="30,10">
+                    <HorizontalStackLayout VerticalOptions="Center" Spacing="5">
+                        <Label x:Name="NameTag" Text="Name: " FontSize="30" FontAttributes="Bold" FontFamily="OpenSansBold" />
+                        <Label x:Name="Name" FontSize="30" FontAttributes="None" />
+                    </HorizontalStackLayout>
+                </Frame>
+
+                <Frame Background="#fff" CornerRadius="12" Padding="30,10">
+                    <HorizontalStackLayout VerticalOptions="Center" Spacing="5">
+                        <Label x:Name="UsernameTag" Text="Username: " FontSize="30" FontAttributes="Bold" FontFamily="OpenSansBold" />
+                        <Label x:Name="UserName" FontSize="30" FontAttributes="Bold" />
+                    </HorizontalStackLayout>
+                </Frame>
+
+                <Frame Background="#fff" CornerRadius="12" Padding="30,10">
+                    <HorizontalStackLayout VerticalOptions="Center" Spacing="5">
+                        <Label x:Name="EmailTag" Text="Email: " FontSize="30" FontAttributes="Bold" FontFamily="OpenSansBold" />
+                        <Label x:Name="Email" FontSize="30" FontAttributes="Bold" />
+                    </HorizontalStackLayout>
+                </Frame>
+                <Frame Background="#fff" CornerRadius="12" Padding="30,10">
+                    <HorizontalStackLayout VerticalOptions="Center" Spacing="5">
+                        <Label x:Name="PasswordTag" Text="Password: " FontSize="30" FontAttributes="Bold" FontFamily="OpenSansBold" />
+                        <Label x:Name="Password" FontSize="30" FontAttributes="Bold" />
+                    </HorizontalStackLayout>
+                </Frame>
+                <Frame Background="#fff" CornerRadius="12" Padding="30,10">
+                    <HorizontalStackLayout VerticalOptions="Center" Spacing="5">
+                        <Label x:Name="NumberOperationsTag" Text="Number of Operations: " FontSize="30" FontAttributes="Bold" FontFamily="OpenSansBold" />
+                        <Label x:Name="NumberOperations" FontSize="30" FontAttributes="Bold" />
+                    </HorizontalStackLayout>
+                </Frame>
+
+                <!-- Close Button -->
+                <Button Margin="0,40"
+                    x:Name="LoginBtn"
+                    Text="CLOSE"
+                    FontSize="36"
+                    WidthRequest="260"
+                    BackgroundColor="#fff"
+                    FontFamily="OpenSansBold"
+                    TextColor="#000"
+                    HorizontalOptions="Center"
+                    Clicked="ClosePopup" />
+            </VerticalStackLayout>
+        </Frame>
+    </ScrollView>
 </toolkit:Popup>

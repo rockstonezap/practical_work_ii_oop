@@ -132,7 +132,6 @@
 
                     <!-- Privacy Policy Check -->
                     <HorizontalStackLayout Spacing="10">
-
                         <Label FontSize="20" 
                             Text="To use our service, please accept our Privacy Policy" 
                             VerticalOptions="Center" />

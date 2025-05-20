@@ -33,10 +33,10 @@ public class AccountsData
     public string[] SearchForUser(string username, string password, ref bool found)
     {
         using StreamReader reader = new StreamReader(this.FilePath);
-        string line = "";
+        string? line = "";
         string[] CurrentUserData = [];
 
-        while ((line = reader.ReadLine()) != null && !found)
+        while ((line = reader?.ReadLine()) != null && !found)
         {
             // Order of Items: Name | Username | Email | Password | NumberOperations
             string[] Data = line.Split(";");

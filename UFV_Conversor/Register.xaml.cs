@@ -48,7 +48,7 @@ public partial class Register : ContentPage
             string passwordConfirm = passConfirmEntry.Text;
 
             // Basic checkup on conditions for proper registration
-            if (privacyPolicyBox.IsChecked == true)
+            if (privacyPolicyBox.IsChecked == false)
                 throw new ValidationException("You must agree to the terms before continuing.");
             else if (name == username)
                 throw new FormatException("Name and username cannot be the same.");
