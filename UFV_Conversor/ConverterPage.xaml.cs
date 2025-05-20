@@ -4,6 +4,7 @@ namespace UFV_Conversor;
 
 public partial class ConverterPage : ContentPage
 {
+    private AccountsData Data = new AccountsData();
     private List<Conversion> operations;
 
     public ConverterPage()
@@ -119,6 +120,8 @@ public partial class ConverterPage : ContentPage
             // ! is to remove the warning, since I'm absolutely certain that value will never be null
             var userData = AppSession.CurrentUser?.UserData;
             userData![4] = Convert.ToString(currentCount + 1);
+
+            Data.UpdateCounter(userData[1], userData[4]);
 
             await DisplayAlert(this.operations[op].GetName() + ": ", $"{input} ==> {output}", "OK");
 

@@ -68,7 +68,7 @@ public class AccountsData
         {
             // Order of Items: Name | Username | Email | Password | NumberOperations
             string[] accountData = line.Split(";");
- 
+
             string currentUsername = accountData[1];
             string currentEmail = accountData[2];
             string oldPassword = accountData[3];
@@ -88,6 +88,43 @@ public class AccountsData
         if (!found)
         {
             throw new ValidationException("Validation Failed: Please verify if your username or email are correct");
+        }
+
+        // Clearing file using append: false and reintroducing each line into the document
+        using StreamWriter writer = new StreamWriter(this.FilePath, append: false);
+
+        foreach (string item in documentText)
+        {
+            writer.WriteLine(item);
+        }
+    }
+
+    public void UpdateCounter(string username, string currentCount)
+    {
+        using StreamReader reader = new StreamReader(this.FilePath);
+
+        string? line = "";
+        List<string> documentText = new List<string>();
+
+        int i = 0;
+        // Reads file, adds each line to array and checks if username does exist 
+        while ((line = reader.ReadLine()) != null)
+        {
+            // Order of Items: Name | Username | Email | Password | NumberOperations
+            string[] accountData = line.Split(";");
+
+            string currentUsername = accountData[1];
+            string numberOperations = accountData[4];
+
+            if (username == currentUsername)
+            {
+                // Updates last added line in the list that goes through if check
+                line = line.Replace(numberOperations, currentCount);
+            }
+
+            documentText.Add(line);
+
+            i++;
         }
 
         // Clearing file using append: false and reintroducing each line into the document
