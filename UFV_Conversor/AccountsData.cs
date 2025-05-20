@@ -119,7 +119,7 @@ public class AccountsData
             if (username == currentUsername)
             {
                 // Updates last added line in the list that goes through if check
-                line = line.Replace(numberOperations, currentCount);
+                line = line.Replace(";" + numberOperations, ";" + currentCount);
             }
 
             documentText.Add(line);

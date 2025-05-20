@@ -43,7 +43,7 @@
             </Frame>
 
             <!-- Header -->
-            <Frame BackgroundColor="{StaticResource AppHeader}"
+            <Frame BackgroundColor="#3A5A78"
                 HorizontalOptions="Fill"
                 VerticalOptions="Fill"
                 Padding="50,60" >
