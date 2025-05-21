@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UFV_Conversor", "UFV_Conversor.csproj", "{1C25F9F7-0E95-6C99-B24D-055A874EA6ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C25F9F7-0E95-6C99-B24D-055A874EA6ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C25F9F7-0E95-6C99-B24D-055A874EA6ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C25F9F7-0E95-6C99-B24D-055A874EA6ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C25F9F7-0E95-6C99-B24D-055A874EA6ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A74280D2-35B6-4DDE-94B4-2BF509ACD3F2}
+	EndGlobalSection
+EndGlobal
