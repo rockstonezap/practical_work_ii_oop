@@ -23,11 +23,6 @@ public partial class ConverterPage : ContentPage
         this.operations.Add(new HexadecimalToDecimal("Decimal", "Hexadecimal to Decimal"));
     }
 
-    private async void GoToPrivacyPolicy(object sender, EventArgs e)
-    {
-        await Shell.Current.GoToAsync("PrivacyPolicy");
-    }
-
     private void AddNewElement(object sender, EventArgs e)
     {
         if (sender is Button button && button.CommandParameter is string value)
