@@ -8,7 +8,6 @@ public abstract class Conversion
 
     public Conversion(string name, string definition, InputValidator validator)
     {
-
         this.name = name;
         this.definition = definition;
         this.validator = validator;
@@ -19,11 +18,6 @@ public abstract class Conversion
     public string GetName()
     {
         return this.name;
-    }
-
-    public string GetDefinition()
-    {
-        return this.definition;
     }
 
     public void Validate(string input)

@@ -4,7 +4,7 @@ namespace UFV_Conversor;
 
 public partial class Register : ContentPage
 {
-    private PasswordValidator passwordChecker = new PasswordValidator();
+    private PasswordValidator PasswordChecker = new PasswordValidator();
     private AccountsData Data = new AccountsData();
 
     public Register()
@@ -17,6 +17,7 @@ public partial class Register : ContentPage
         await Shell.Current.GoToAsync("PrivacyPolicy");
     }
 
+    // Adds user to accounts.csv file in a Container created by the App on Initialization
     private async void RegisterUser(object sender, EventArgs e)
     {
         // Get Containarised location for files for App and add Accounts Directory
@@ -55,7 +56,7 @@ public partial class Register : ContentPage
             else if (password != passwordConfirm)
                 throw new FormatException("Password confirmation failed. Passwords must match.");
 
-            passwordChecker.Validate(password);
+            PasswordChecker.Validate(password);
 
             Data.AddUser(information);
 

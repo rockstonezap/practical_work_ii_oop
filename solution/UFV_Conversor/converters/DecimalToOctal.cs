@@ -1,15 +1,16 @@
 namespace UFV_Conversor;
 
-public class DecimalToOctal : Conversion {
-    
-    public DecimalToOctal(string name, string definition) : base(name, definition, new DecimalInputValidator()) {}
+public class DecimalToOctal : Conversion
+{
+    public DecimalToOctal(string name, string definition) : base(name, definition, new DecimalInputValidator()) { }
 
-    public override string Change(string input) {
-
-        int number = Int32.Parse(input);;
+    public override string Change(string input)
+    {
+        int number = Int32.Parse(input); ;
         string octalString = "";
 
-        while (number > 0) {
+        while (number > 0)
+        {
             int remainder = number % 8;
             octalString = remainder + octalString;
             number /= 8;

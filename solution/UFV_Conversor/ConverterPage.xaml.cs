@@ -23,12 +23,14 @@ public partial class ConverterPage : ContentPage
         this.operations.Add(new HexadecimalToDecimal("Decimal", "Hexadecimal to Decimal"));
     }
 
+    // Method just to get the event from page, executes the next method for the actual addition
     private void AddNewElement(object sender, EventArgs e)
     {
         if (sender is Button button && button.CommandParameter is string value)
             AddNewElement(value);
     }
-
+    
+    // Adds any value to the current text in the Entry for Converter
     private async void AddNewElement(string value)
     {
         // When null (on initialization) makes it empty string, to perform string addition later
@@ -53,6 +55,7 @@ public partial class ConverterPage : ContentPage
         }
     }
 
+    // Negates the number in the Entry for Converter
     private async void PerformNegation(object sender, EventArgs e)
     {
         string input = userInput.Text ?? "";
@@ -82,17 +85,20 @@ public partial class ConverterPage : ContentPage
         }
     }
 
+    // Clears the Entry Contents for Converter
     private void ClearUserInput(object sender, EventArgs e)
     {
         userInput.Text = "";
     }
 
+    // Method just to get the event from page, executes the next method for the actual execution
     private void PerformConversion(object sender, EventArgs e)
     {
         if (sender is Button button && button.CommandParameter is string op)
             PerformConversion(Convert.ToInt16(op));
     }
 
+    // Executes the conversion chosen by the user
     private async void PerformConversion(int op)
     {
         string input = userInput.Text ?? "";
@@ -138,6 +144,7 @@ public partial class ConverterPage : ContentPage
         }
     }
 
+    // Displays the information of the user using a popup and information from AppSession
     private async void ShowUserInfo(object sender, EventArgs e)
     {
         await Task.Delay(25);
@@ -152,13 +159,14 @@ public partial class ConverterPage : ContentPage
         this.ShowPopup(popup);
     }
 
+    // Empties out AppSession and redirects to Homepage
     private async void LogoutUser(object sender, EventArgs e)
     {
         AppSession.CurrentUser = new User(new string[5]);
 
         await Shell.Current.GoToAsync("Homepage");
     }
-    
+
     private void Exit(object sender, EventArgs e)
     {
         if (App.Current != null)

@@ -8,40 +8,49 @@
             Padding="30,0"
             Margin="0,20"
             Spacing="25">
-            
+
             <!-- Navigation -->
             <Frame BackgroundColor="#fff"
-                HorizontalOptions="Fill"
-                VerticalOptions="Fill"
-                Padding="40,20">
+                   HorizontalOptions="Fill"
+                   VerticalOptions="Fill"
+                   Padding="40,20">
 
                 <Grid ColumnDefinitions="Auto,*">
-                    
+
                     <Image Grid.Column="0"
-                        Source="ufv_logo.png"
-                        HeightRequest="50"
-                        Aspect="AspectFit"
-                        SemanticProperties.Description="Logo for University Francisco de Vitoria" />
-                    
-                    <HorizontalStackLayout Grid.Column="1" 
-                        HorizontalOptions="End"
-                        Spacing="40" >
-                        
-                        <Label VerticalOptions="Center" FontSize="22" Text="Operations" TextColor="Black">
+                           Source="ufv_logo.png"
+                           HeightRequest="50"
+                           Aspect="AspectFit"
+                           SemanticProperties.Description="Logo for University Francisco de Vitoria"/>
+
+                    <HorizontalStackLayout Grid.Column="1"
+                                           HorizontalOptions="End"
+                                           Spacing="40">
+
+                        <Label VerticalOptions="Center"
+                                FontSize="22"
+                                Text="Operations"
+                                TextColor="Black">
                             <Label.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="ShowUserInfo" />
+                                <TapGestureRecognizer Tapped="ShowUserInfo"/>
                             </Label.GestureRecognizers>
                         </Label>
 
-                        <Label VerticalOptions="Center" FontSize="22" Text="Logout" TextColor="Black">
+                        <Label VerticalOptions="Center"
+                                FontSize="22"
+                                Text="Logout"
+                                TextColor="Black">
                             <Label.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="LogoutUser" />
+                                <TapGestureRecognizer Tapped="LogoutUser"/>
                             </Label.GestureRecognizers>
                         </Label>
 
-                        <Label VerticalOptions="Center" FontSize="22" Text="Exit" TextColor="Black">
+                        <Label VerticalOptions="Center"
+                                FontSize="22"
+                                Text="Exit"
+                                TextColor="Black">
                             <Label.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="Exit" />
+                                <TapGestureRecognizer Tapped="Exit"/>
                             </Label.GestureRecognizers>
                         </Label>
                     </HorizontalStackLayout>
@@ -49,29 +58,35 @@
                 </Grid>
             </Frame>
 
-             <!-- Header -->
+            <!-- Header -->
             <Frame BackgroundColor="#3A5A78"
-                HorizontalOptions="Fill"
-                VerticalOptions="Fill"
-                Padding="50,60" >
+                   HorizontalOptions="Fill"
+                   VerticalOptions="Fill"
+                   Padding="50,60">
 
-                <Label HorizontalOptions="Center" FontAttributes="Bold" VerticalOptions="Center" FontSize="60" Text="Converter" TextColor="White" />
+                <Label HorizontalOptions="Center"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"
+                        FontSize="60"
+                        Text="Converter"
+                        TextColor="White"/>
             </Frame>
 
             <!-- Main Content -->
-            <Frame BackgroundColor="#D3D3D3" Padding="20,50">  
+            <Frame BackgroundColor="#D3D3D3"
+                    Padding="20,50">
                 <VerticalStackLayout Spacing="30">
-                    
+
                     <!-- User Input -->
                     <Grid ColumnDefinitions="*">
 
                         <Entry x:Name="userInput"
-                            FlowDirection="RightToLeft"
-                            HorizontalOptions="Fill"
-                            FontSize="26"
-                            BackgroundColor="White"
-                            TextColor="Black"
-                            HeightRequest="70" />
+                               FlowDirection="RightToLeft"
+                               HorizontalOptions="Fill"
+                               FontSize="26"
+                               BackgroundColor="White"
+                               TextColor="Black"
+                               HeightRequest="70"/>
                     </Grid>
 
                     <!-- Keypad for Input -->
@@ -81,324 +96,332 @@
                         <VerticalStackLayout Spacing="15">
 
                             <!-- Row Keypad 7 8 9 -->
-                            <Grid ColumnDefinitions="Auto,Auto,Auto" ColumnSpacing="20">
+                            <Grid ColumnDefinitions="Auto,Auto,Auto"
+                                    ColumnSpacing="20">
                                 <Button x:Name="key7"
-                                    Grid.Column="0"
-                                    Text="7"
-                                    FontSize="28"
-                                    WidthRequest="160"
-                                    BackgroundColor="#A9A9A9"
-                                    FontFamily="OpenSans"
-                                    TextColor="#000"
-                                    Clicked="AddNewElement"
-                                    CommandParameter="7"
-                                    HorizontalOptions="Center" />
-                                
+                                        Grid.Column="0"
+                                        Text="7"
+                                        FontSize="28"
+                                        WidthRequest="160"
+                                        BackgroundColor="#A9A9A9"
+                                        FontFamily="OpenSans"
+                                        TextColor="#000"
+                                        Clicked="AddNewElement"
+                                        CommandParameter="7"
+                                        HorizontalOptions="Center"/>
+
                                 <Button x:Name="key8"
-                                    Grid.Column="1"
-                                    Text="8"
-                                    FontSize="28"
-                                    WidthRequest="160"
-                                    BackgroundColor="#A9A9A9"
-                                    FontFamily="OpenSans"
-                                    TextColor="#000"
-                                    Clicked="AddNewElement"
-                                    CommandParameter="8"
-                                    HorizontalOptions="Center" />
+                                        Grid.Column="1"
+                                        Text="8"
+                                        FontSize="28"
+                                        WidthRequest="160"
+                                        BackgroundColor="#A9A9A9"
+                                        FontFamily="OpenSans"
+                                        TextColor="#000"
+                                        Clicked="AddNewElement"
+                                        CommandParameter="8"
+                                        HorizontalOptions="Center"/>
 
                                 <Button x:Name="key9"
-                                    Grid.Column="2"
-                                    Text="9"
-                                    FontSize="28"
-                                    WidthRequest="160"
-                                    BackgroundColor="#A9A9A9"
-                                    FontFamily="OpenSans"
-                                    TextColor="#000"
-                                    Clicked="AddNewElement"
-                                    CommandParameter="9"
-                                    HorizontalOptions="Center" />
+                                        Grid.Column="2"
+                                        Text="9"
+                                        FontSize="28"
+                                        WidthRequest="160"
+                                        BackgroundColor="#A9A9A9"
+                                        FontFamily="OpenSans"
+                                        TextColor="#000"
+                                        Clicked="AddNewElement"
+                                        CommandParameter="9"
+                                        HorizontalOptions="Center"/>
                             </Grid>
 
                             <!-- Row Keypad 4 5 6 -->
-                            <Grid ColumnDefinitions="Auto,Auto,Auto" ColumnSpacing="20">
+                            <Grid ColumnDefinitions="Auto,Auto,Auto"
+                                    ColumnSpacing="20">
                                 <Button x:Name="key4"
-                                    Grid.Column="0"
-                                    Text="4"
-                                    FontSize="28"
-                                    WidthRequest="160"
-                                    BackgroundColor="#A9A9A9"
-                                    FontFamily="OpenSans"
-                                    TextColor="#000"
-                                    Clicked="AddNewElement"
-                                    CommandParameter="4"
-                                    HorizontalOptions="Center" />
-                                
+                                        Grid.Column="0"
+                                        Text="4"
+                                        FontSize="28"
+                                        WidthRequest="160"
+                                        BackgroundColor="#A9A9A9"
+                                        FontFamily="OpenSans"
+                                        TextColor="#000"
+                                        Clicked="AddNewElement"
+                                        CommandParameter="4"
+                                        HorizontalOptions="Center"/>
+
                                 <Button x:Name="key5"
-                                    Grid.Column="1"
-                                    Text="5"
-                                    FontSize="28"
-                                    WidthRequest="160"
-                                    BackgroundColor="#A9A9A9"
-                                    FontFamily="OpenSans"
-                                    TextColor="#000"
-                                    Clicked="AddNewElement"
-                                    CommandParameter="5"
-                                    HorizontalOptions="Center" />
+                                        Grid.Column="1"
+                                        Text="5"
+                                        FontSize="28"
+                                        WidthRequest="160"
+                                        BackgroundColor="#A9A9A9"
+                                        FontFamily="OpenSans"
+                                        TextColor="#000"
+                                        Clicked="AddNewElement"
+                                        CommandParameter="5"
+                                        HorizontalOptions="Center"/>
 
                                 <Button x:Name="key6"
-                                    Grid.Column="2"
-                                    Text="6"
-                                    FontSize="28"
-                                    WidthRequest="160"
-                                    BackgroundColor="#A9A9A9"
-                                    FontFamily="OpenSans"
-                                    TextColor="#000"
-                                    Clicked="AddNewElement"
-                                    CommandParameter="6"
-                                    HorizontalOptions="Center" />
+                                        Grid.Column="2"
+                                        Text="6"
+                                        FontSize="28"
+                                        WidthRequest="160"
+                                        BackgroundColor="#A9A9A9"
+                                        FontFamily="OpenSans"
+                                        TextColor="#000"
+                                        Clicked="AddNewElement"
+                                        CommandParameter="6"
+                                        HorizontalOptions="Center"/>
                             </Grid>
 
                             <!-- Row Keypad 1 2 3 -->
-                            <Grid ColumnDefinitions="Auto,Auto,Auto" ColumnSpacing="20">
+                            <Grid ColumnDefinitions="Auto,Auto,Auto"
+                                    ColumnSpacing="20">
                                 <Button x:Name="key1"
-                                    Grid.Column="0"
-                                    Text="1"
-                                    FontSize="28"
-                                    WidthRequest="160"
-                                    BackgroundColor="#A9A9A9"
-                                    FontFamily="OpenSans"
-                                    TextColor="#000"
-                                    Clicked="AddNewElement"
-                                    CommandParameter="1"
-                                    HorizontalOptions="Center" />
-                                
+                                        Grid.Column="0"
+                                        Text="1"
+                                        FontSize="28"
+                                        WidthRequest="160"
+                                        BackgroundColor="#A9A9A9"
+                                        FontFamily="OpenSans"
+                                        TextColor="#000"
+                                        Clicked="AddNewElement"
+                                        CommandParameter="1"
+                                        HorizontalOptions="Center"/>
+
                                 <Button x:Name="key2"
-                                    Grid.Column="1"
-                                    Text="2"
-                                    FontSize="28"
-                                    WidthRequest="160"
-                                    BackgroundColor="#A9A9A9"
-                                    FontFamily="OpenSans"
-                                    TextColor="#000"
-                                    Clicked="AddNewElement"
-                                    CommandParameter="2"
-                                    HorizontalOptions="Center" />
+                                        Grid.Column="1"
+                                        Text="2"
+                                        FontSize="28"
+                                        WidthRequest="160"
+                                        BackgroundColor="#A9A9A9"
+                                        FontFamily="OpenSans"
+                                        TextColor="#000"
+                                        Clicked="AddNewElement"
+                                        CommandParameter="2"
+                                        HorizontalOptions="Center"/>
 
                                 <Button x:Name="key3"
-                                    Grid.Column="2"
-                                    Text="3"
-                                    FontSize="28"
-                                    WidthRequest="160"
-                                    BackgroundColor="#A9A9A9"
-                                    FontFamily="OpenSans"
-                                    TextColor="#000"
-                                    Clicked="AddNewElement"
-                                    CommandParameter="3"
-                                    HorizontalOptions="Center" />
+                                        Grid.Column="2"
+                                        Text="3"
+                                        FontSize="28"
+                                        WidthRequest="160"
+                                        BackgroundColor="#A9A9A9"
+                                        FontFamily="OpenSans"
+                                        TextColor="#000"
+                                        Clicked="AddNewElement"
+                                        CommandParameter="3"
+                                        HorizontalOptions="Center"/>
                             </Grid>
 
                             <!-- Row Keypad AC 0 - -->
-                            <Grid ColumnDefinitions="Auto,Auto,Auto" ColumnSpacing="20">
+                            <Grid ColumnDefinitions="Auto,Auto,Auto"
+                                    ColumnSpacing="20">
                                 <Button x:Name="keyAC"
-                                    Grid.Column="0"
-                                    Text="AC"
-                                    FontSize="28"
-                                    WidthRequest="160"
-                                    BackgroundColor="#A9A9A9"
-                                    FontFamily="OpenSans"
-                                    TextColor="#000"
-                                    Clicked="ClearUserInput"
-                                    HorizontalOptions="Center" />
-                                
+                                        Grid.Column="0"
+                                        Text="AC"
+                                        FontSize="28"
+                                        WidthRequest="160"
+                                        BackgroundColor="#A9A9A9"
+                                        FontFamily="OpenSans"
+                                        TextColor="#000"
+                                        Clicked="ClearUserInput"
+                                        HorizontalOptions="Center"/>
+
                                 <Button x:Name="key0"
-                                    Grid.Column="1"
-                                    Text="0"
-                                    FontSize="28"
-                                    WidthRequest="160"
-                                    BackgroundColor="#A9A9A9"
-                                    FontFamily="OpenSans"
-                                    TextColor="#000"
-                                    Clicked="AddNewElement"
-                                    CommandParameter="0"
-                                    HorizontalOptions="Center" />
+                                        Grid.Column="1"
+                                        Text="0"
+                                        FontSize="28"
+                                        WidthRequest="160"
+                                        BackgroundColor="#A9A9A9"
+                                        FontFamily="OpenSans"
+                                        TextColor="#000"
+                                        Clicked="AddNewElement"
+                                        CommandParameter="0"
+                                        HorizontalOptions="Center"/>
 
                                 <Button x:Name="keyMinus"
-                                    Grid.Column="2"
-                                    Text="-"
-                                    FontSize="28"
-                                    WidthRequest="160"
-                                    BackgroundColor="#A9A9A9"
-                                    FontFamily="OpenSans"
-                                    TextColor="#000"
-                                    Clicked="PerformNegation"
-                                    HorizontalOptions="Center" />
+                                        Grid.Column="2"
+                                        Text="-"
+                                        FontSize="28"
+                                        WidthRequest="160"
+                                        BackgroundColor="#A9A9A9"
+                                        FontFamily="OpenSans"
+                                        TextColor="#000"
+                                        Clicked="PerformNegation"
+                                        HorizontalOptions="Center"/>
                             </Grid>
 
-                            <BoxView HeightRequest="60" BackgroundColor="Transparent" />
+                            <BoxView HeightRequest="60"
+                                    BackgroundColor="Transparent"/>
 
                             <!-- Row Keypad A B C -->
-                            <Grid ColumnDefinitions="Auto,Auto,Auto" ColumnSpacing="20">
+                            <Grid ColumnDefinitions="Auto,Auto,Auto"
+                                    ColumnSpacing="20">
                                 <Button x:Name="keyA"
-                                    Grid.Column="0"
-                                    Text="A"
-                                    FontSize="28"
-                                    WidthRequest="160"
-                                    BackgroundColor="#A9A9A9"
-                                    FontFamily="OpenSans"
-                                    TextColor="#000"
-                                    Clicked="AddNewElement"
-                                    CommandParameter="A"
-                                    HorizontalOptions="Center" />
-                                
+                                        Grid.Column="0"
+                                        Text="A"
+                                        FontSize="28"
+                                        WidthRequest="160"
+                                        BackgroundColor="#A9A9A9"
+                                        FontFamily="OpenSans"
+                                        TextColor="#000"
+                                        Clicked="AddNewElement"
+                                        CommandParameter="A"
+                                        HorizontalOptions="Center"/>
+
                                 <Button x:Name="keyB"
-                                    Grid.Column="1"
-                                    Text="B"
-                                    FontSize="28"
-                                    WidthRequest="160"
-                                    BackgroundColor="#A9A9A9"
-                                    FontFamily="OpenSans"
-                                    TextColor="#000"
-                                    Clicked="AddNewElement"
-                                    CommandParameter="B"
-                                    HorizontalOptions="Center" />
+                                        Grid.Column="1"
+                                        Text="B"
+                                        FontSize="28"
+                                        WidthRequest="160"
+                                        BackgroundColor="#A9A9A9"
+                                        FontFamily="OpenSans"
+                                        TextColor="#000"
+                                        Clicked="AddNewElement"
+                                        CommandParameter="B"
+                                        HorizontalOptions="Center"/>
 
                                 <Button x:Name="keyC"
-                                    Grid.Column="2"
-                                    Text="C"
-                                    FontSize="28"
-                                    WidthRequest="160"
-                                    BackgroundColor="#A9A9A9"
-                                    FontFamily="OpenSans"
-                                    TextColor="#000"
-                                    Clicked="AddNewElement"
-                                    CommandParameter="C"
-                                    HorizontalOptions="Center" />
+                                        Grid.Column="2"
+                                        Text="C"
+                                        FontSize="28"
+                                        WidthRequest="160"
+                                        BackgroundColor="#A9A9A9"
+                                        FontFamily="OpenSans"
+                                        TextColor="#000"
+                                        Clicked="AddNewElement"
+                                        CommandParameter="C"
+                                        HorizontalOptions="Center"/>
                             </Grid>
 
                             <!-- Row Keypad D E F -->
-                            <Grid ColumnDefinitions="Auto,Auto,Auto" ColumnSpacing="20">
+                            <Grid ColumnDefinitions="Auto,Auto,Auto"
+                                    ColumnSpacing="20">
                                 <Button x:Name="keyD"
-                                    Grid.Column="0"
-                                    Text="D"
-                                    FontSize="28"
-                                    WidthRequest="160"
-                                    BackgroundColor="#A9A9A9"
-                                    FontFamily="OpenSans"
-                                    TextColor="#000"
-                                    Clicked="AddNewElement"
-                                    CommandParameter="D"
-                                    HorizontalOptions="Center" />
-                                
+                                        Grid.Column="0"
+                                        Text="D"
+                                        FontSize="28"
+                                        WidthRequest="160"
+                                        BackgroundColor="#A9A9A9"
+                                        FontFamily="OpenSans"
+                                        TextColor="#000"
+                                        Clicked="AddNewElement"
+                                        CommandParameter="D"
+                                        HorizontalOptions="Center"/>
+
                                 <Button x:Name="keyE"
-                                    Grid.Column="1"
-                                    Text="E"
-                                    FontSize="28"
-                                    WidthRequest="160"
-                                    BackgroundColor="#A9A9A9"
-                                    FontFamily="OpenSans"
-                                    TextColor="#000"
-                                    Clicked="AddNewElement"
-                                    CommandParameter="E"
-                                    HorizontalOptions="Center" />
+                                        Grid.Column="1"
+                                        Text="E"
+                                        FontSize="28"
+                                        WidthRequest="160"
+                                        BackgroundColor="#A9A9A9"
+                                        FontFamily="OpenSans"
+                                        TextColor="#000"
+                                        Clicked="AddNewElement"
+                                        CommandParameter="E"
+                                        HorizontalOptions="Center"/>
 
                                 <Button x:Name="keyF"
-                                    Grid.Column="2"
-                                    Text="F"
-                                    FontSize="28"
-                                    WidthRequest="160"
-                                    BackgroundColor="#A9A9A9"
-                                    FontFamily="OpenSans"
-                                    TextColor="#000"
-                                    Clicked="AddNewElement"
-                                    CommandParameter="F"
-                                    HorizontalOptions="Center" />
+                                        Grid.Column="2"
+                                        Text="F"
+                                        FontSize="28"
+                                        WidthRequest="160"
+                                        BackgroundColor="#A9A9A9"
+                                        FontFamily="OpenSans"
+                                        TextColor="#000"
+                                        Clicked="AddNewElement"
+                                        CommandParameter="F"
+                                        HorizontalOptions="Center"/>
                             </Grid>
 
                         </VerticalStackLayout>
 
                         <!-- Type of Conversions -->
-                        <VerticalStackLayout Grid.Column="1" Spacing="15">
+                        <VerticalStackLayout Grid.Column="1"
+                                Spacing="15">
 
                             <Button x:Name="DecimalToBinary"
-                                HorizontalOptions="Fill"
-                                Text="DecimalToBinary"
-                                FontSize="28"
-                                BackgroundColor="#A9A9A9"
-                                FontFamily="OpenSans"
-                                Clicked="PerformConversion"
-                                CommandParameter="0"
-                                TextColor="#000" />
+                                    HorizontalOptions="Fill"
+                                    Text="DecimalToBinary"
+                                    FontSize="28"
+                                    BackgroundColor="#A9A9A9"
+                                    FontFamily="OpenSans"
+                                    Clicked="PerformConversion"
+                                    CommandParameter="0"
+                                    TextColor="#000"/>
 
                             <Button x:Name="DecimalToTwoComplement"
-                                HorizontalOptions="Fill"
-                                Text="DecimalToTwoComplement"
-                                FontSize="28"
-                                BackgroundColor="#A9A9A9"
-                                FontFamily="OpenSans"
-                                Clicked="PerformConversion"
-                                CommandParameter="3"
-                                TextColor="#000" />
+                                    HorizontalOptions="Fill"
+                                    Text="DecimalToTwoComplement"
+                                    FontSize="28"
+                                    BackgroundColor="#A9A9A9"
+                                    FontFamily="OpenSans"
+                                    Clicked="PerformConversion"
+                                    CommandParameter="3"
+                                    TextColor="#000"/>
 
                             <Button x:Name="DecimalToOctal"
-                                HorizontalOptions="Fill"
-                                Text="DecimalToOctal"
-                                FontSize="28"
-                                BackgroundColor="#A9A9A9"
-                                FontFamily="OpenSans"
-                                Clicked="PerformConversion"
-                                CommandParameter="1"
-                                TextColor="#000" />
-                            
+                                    HorizontalOptions="Fill"
+                                    Text="DecimalToOctal"
+                                    FontSize="28"
+                                    BackgroundColor="#A9A9A9"
+                                    FontFamily="OpenSans"
+                                    Clicked="PerformConversion"
+                                    CommandParameter="1"
+                                    TextColor="#000"/>
+
                             <Button x:Name="DecimalToHexadecimal"
-                                HorizontalOptions="Fill"
-                                Text="DecimalToHexadecimal"
-                                FontSize="28"
-                                BackgroundColor="#A9A9A9"
-                                FontFamily="OpenSans"
-                                Clicked="PerformConversion"
-                                CommandParameter="2"
-                                TextColor="#000" />
-                            
+                                    HorizontalOptions="Fill"
+                                    Text="DecimalToHexadecimal"
+                                    FontSize="28"
+                                    BackgroundColor="#A9A9A9"
+                                    FontFamily="OpenSans"
+                                    Clicked="PerformConversion"
+                                    CommandParameter="2"
+                                    TextColor="#000"/>
+
                             <Button x:Name="BinaryToDecimal"
-                                HorizontalOptions="Fill"
-                                Text="BinaryToDecimal"
-                                FontSize="28"
-                                BackgroundColor="#A9A9A9"
-                                FontFamily="OpenSans"
-                                Clicked="PerformConversion"
-                                CommandParameter="4"
-                                TextColor="#000" />
-                            
+                                    HorizontalOptions="Fill"
+                                    Text="BinaryToDecimal"
+                                    FontSize="28"
+                                    BackgroundColor="#A9A9A9"
+                                    FontFamily="OpenSans"
+                                    Clicked="PerformConversion"
+                                    CommandParameter="4"
+                                    TextColor="#000"/>
+
                             <Button x:Name="TwoComplementToDecimal"
-                                HorizontalOptions="Fill"
-                                Text="TwoComplementToDecimal"
-                                FontSize="28"
-                                BackgroundColor="#A9A9A9"
-                                FontFamily="OpenSans"
-                                Clicked="PerformConversion"
-                                CommandParameter="5"
-                                TextColor="#000" />
-                            
+                                    HorizontalOptions="Fill"
+                                    Text="TwoComplementToDecimal"
+                                    FontSize="28"
+                                    BackgroundColor="#A9A9A9"
+                                    FontFamily="OpenSans"
+                                    Clicked="PerformConversion"
+                                    CommandParameter="5"
+                                    TextColor="#000"/>
+
                             <Button x:Name="OctalToDecimal"
-                                HorizontalOptions="Fill"
-                                Text="OctalToDecimal"
-                                FontSize="28"
-                                BackgroundColor="#A9A9A9"
-                                FontFamily="OpenSans"
-                                Clicked="PerformConversion"
-                                CommandParameter="6"
-                                TextColor="#000" />
-                            
+                                    HorizontalOptions="Fill"
+                                    Text="OctalToDecimal"
+                                    FontSize="28"
+                                    BackgroundColor="#A9A9A9"
+                                    FontFamily="OpenSans"
+                                    Clicked="PerformConversion"
+                                    CommandParameter="6"
+                                    TextColor="#000"/>
+
                             <Button x:Name="HexadecimalToDecimal"
-                                HorizontalOptions="Fill"
-                                Text="HexadecimalToDecimal"
-                                FontSize="28"
-                                BackgroundColor="#A9A9A9"
-                                FontFamily="OpenSans"
-                                Clicked="PerformConversion"
-                                CommandParameter="7"
-                                TextColor="#000" />
-                            
+                                    HorizontalOptions="Fill"
+                                    Text="HexadecimalToDecimal"
+                                    FontSize="28"
+                                    BackgroundColor="#A9A9A9"
+                                    FontFamily="OpenSans"
+                                    Clicked="PerformConversion"
+                                    CommandParameter="7"
+                                    TextColor="#000"/>
+
                         </VerticalStackLayout>
                     </Grid>
                 </VerticalStackLayout>

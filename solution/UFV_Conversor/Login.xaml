@@ -8,33 +8,39 @@
             Padding="30,0"
             Margin="0,20"
             Spacing="25">
-            
+
             <!-- Navigation -->
             <Frame BackgroundColor="#fff"
-                HorizontalOptions="Fill"
-                VerticalOptions="Fill"
-                Padding="40,20">
+                   HorizontalOptions="Fill"
+                   VerticalOptions="Fill"
+                   Padding="40,20">
 
                 <Grid ColumnDefinitions="Auto,*">
-                    
-                    <Image Source="ufv_logo.png"
-                        HeightRequest="50"
-                        Aspect="AspectFit"
-                        SemanticProperties.Description="Logo for University Francisco de Vitoria" />
-                        
-                    <HorizontalStackLayout Grid.Column="1" 
-                        HorizontalOptions="End"
-                        Spacing="40" >
 
-                        <Label VerticalOptions="Center" FontSize="22" Text="Privacy Policy" TextColor="Black">
+                    <Image Source="ufv_logo.png"
+                           HeightRequest="50"
+                           Aspect="AspectFit"
+                           SemanticProperties.Description="Logo for University Francisco de Vitoria"/>
+
+                    <HorizontalStackLayout Grid.Column="1"
+                                           HorizontalOptions="End"
+                                           Spacing="40">
+
+                        <Label VerticalOptions="Center"
+                                FontSize="22"
+                                Text="Privacy Policy"
+                                TextColor="Black">
                             <Label.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="GoToPrivacyPolicy" />
+                                <TapGestureRecognizer Tapped="GoToPrivacyPolicy"/>
                             </Label.GestureRecognizers>
                         </Label>
 
-                        <Label VerticalOptions="Center" FontSize="22" Text="Exit" TextColor="Black">
+                        <Label VerticalOptions="Center"
+                                FontSize="22"
+                                Text="Exit"
+                                TextColor="Black">
                             <Label.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="Exit" />
+                                <TapGestureRecognizer Tapped="Exit"/>
                             </Label.GestureRecognizers>
                         </Label>
                     </HorizontalStackLayout>
@@ -44,68 +50,74 @@
 
             <!-- Header -->
             <Frame BackgroundColor="#3A5A78"
-                HorizontalOptions="Fill"
-                VerticalOptions="Fill"
-                Padding="50,60" >
+                   HorizontalOptions="Fill"
+                   VerticalOptions="Fill"
+                   Padding="50,60">
 
-                <Label HorizontalOptions="Center" FontAttributes="Bold" VerticalOptions="Center" FontSize="60" Text="Converter" TextColor="White" />
+                <Label HorizontalOptions="Center"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"
+                        FontSize="60"
+                        Text="Converter"
+                        TextColor="White"/>
             </Frame>
 
             <!-- Main Content -->
-            <Frame BackgroundColor="#D3D3D3" Padding="0,50">  
+            <Frame BackgroundColor="#D3D3D3"
+                    Padding="0,50">
 
                 <VerticalStackLayout Spacing="30"
-                    VerticalOptions="Center"
-                    HorizontalOptions="Center" >
-                    
+                                     VerticalOptions="Center"
+                                     HorizontalOptions="Center">
+
                     <!-- Username -->
                     <VerticalStackLayout Spacing="20">
                         <Label Text="Username"
-                            FontSize="36"
-                            WidthRequest="400" />
+                               FontSize="36"
+                               WidthRequest="400"/>
 
                         <Entry x:Name="loginUsername"
-                            FontSize="26"
-                            BackgroundColor="White"
-                            TextColor="Black"
-                            HeightRequest="70"
-                            WidthRequest="400" />
+                               FontSize="26"
+                               BackgroundColor="White"
+                               TextColor="Black"
+                               HeightRequest="70"
+                               WidthRequest="400"/>
                     </VerticalStackLayout>
-                    
+
                     <!-- Password -->
                     <VerticalStackLayout Spacing="20">
                         <Label Text="Password"
-                            FontSize="36"
-                            WidthRequest="400" />
+                               FontSize="36"
+                               WidthRequest="400"/>
 
                         <Entry x:Name="loginPassword"
-                            FontSize="26"
-                            BackgroundColor="White"
-                            TextColor="Black"
-                            HeightRequest="70"
-                            WidthRequest="400" />
+                               FontSize="26"
+                               BackgroundColor="White"
+                               TextColor="Black"
+                               HeightRequest="70"
+                               WidthRequest="400"/>
                     </VerticalStackLayout>
-                    
+
                     <!-- Forgot Password Button -->
-                    <Button 
+                    <Button
                         Text="Forgot Password?"
                         BackgroundColor="Transparent"
                         TextColor="Blue"
                         FontSize="26"
                         HorizontalOptions="End"
                         Padding="0"
-                        Clicked="GoToResetPassword" />
+                        Clicked="GoToResetPassword"/>
 
                     <!-- Login Button -->
                     <Button x:Name="LoginBtn"
-                        Text="SIGN IN"
-                        FontSize="36"
-                        WidthRequest="260"
-                        BackgroundColor="#B0B0B0"
-                        FontFamily="OpenSansBold"
-                        TextColor="#fff"
-                        HorizontalOptions="Center"
-                        Clicked="ExecuteLogin" />
+                            Text="SIGN IN"
+                            FontSize="36"
+                            WidthRequest="260"
+                            BackgroundColor="#B0B0B0"
+                            FontFamily="OpenSansBold"
+                            TextColor="#fff"
+                            HorizontalOptions="Center"
+                            Clicked="ExecuteLogin"/>
                 </VerticalStackLayout>
             </Frame>
         </VerticalStackLayout>

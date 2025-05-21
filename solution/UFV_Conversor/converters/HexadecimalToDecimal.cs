@@ -2,17 +2,15 @@ namespace UFV_Conversor;
 
 public class HexadecimalToDecimal : Conversion
 {
-    public HexadecimalToDecimal(string name, string definition) : base(name, definition, new HexadecimalInputValidator()) {}
-    
+    public HexadecimalToDecimal(string name, string definition) : base(name, definition, new HexadecimalInputValidator()) { }
+
     public override string Change(string input)
     {
-
         int decimalValue = 0;
         int length = input.Length;
 
         for (int i = 0; i < length; i++)
         {
-
             char digitChar = input[i];
             int digit;
 
@@ -20,7 +18,6 @@ public class HexadecimalToDecimal : Conversion
             {
                 digit = digitChar - '0';
             }
-
             else
             {
                 digit = char.ToUpper(digitChar) - 'A' + 10;

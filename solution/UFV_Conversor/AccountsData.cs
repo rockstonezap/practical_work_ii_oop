@@ -29,7 +29,8 @@ public class AccountsData
         await DisplayAlert("Saved To", filePath, "OK"); 
         */
     }
-
+    
+    // Finds user based on username and password, and if one of them is incorrect, returns false found, and therefore exception DisplayAlert later on
     public string[] SearchForUser(string username, string password, ref bool found)
     {
         using StreamReader reader = new StreamReader(this.FilePath);
@@ -54,6 +55,8 @@ public class AccountsData
 
         return CurrentUserData;
     }
+
+    // Updates the password for the user requested. Authentication is username and email
     public void UpdatePasswordEntry(string username, string email, string password)
     {
         using StreamReader reader = new StreamReader(this.FilePath);
@@ -99,6 +102,7 @@ public class AccountsData
         }
     }
 
+    // Updates current count for total operations done by the user
     public void UpdateCounter(string username, string currentCount)
     {
         using StreamReader reader = new StreamReader(this.FilePath);

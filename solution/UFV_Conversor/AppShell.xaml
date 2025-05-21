@@ -29,7 +29,7 @@
         ContentTemplate="{DataTemplate local:ConverterPage}" />
         
     <ShellContent
-        Title="Recovery"
+        Title="ResetPassword"
         ContentTemplate="{DataTemplate local:ResetPassword}" />
 
 </Shell>

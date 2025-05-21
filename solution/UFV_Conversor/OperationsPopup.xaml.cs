@@ -8,6 +8,8 @@ public partial class OperationsPopup : Popup
     public OperationsPopup(string[] userData)
     {
         InitializeComponent();
+        
+        // Sets size of the popup
         this.Size = new Size(800, 800);
 
         Name.Text = userData[0];

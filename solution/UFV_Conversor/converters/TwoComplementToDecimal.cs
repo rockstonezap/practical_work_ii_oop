@@ -1,53 +1,54 @@
 namespace UFV_Conversor;
-    
-public class TwoComplementToDecimal : Conversion {
 
-    public TwoComplementToDecimal(string name, string definition) : base(name, definition, new BinaryInputValidator()) {}
+public class TwoComplementToDecimal : Conversion
+{
+    public TwoComplementToDecimal(string name, string definition) : base(name, definition, new BinaryInputValidator()) { }
 
-    public override string Change(string input) {
-
+    public override string Change(string input)
+    {
         int n = input.Length;
+        bool isNegative = input[0] == '1';
+        int result = 0;
 
-            bool isNegative = input[0] == '1';
+        if (!isNegative)
+        {
+            for (int i = 0; i < n; i++)
+            {
+                int bit = input[i] - '0';
 
-            int result = 0;
+                result += bit * (int)Math.Pow(2, n - i - 1);
+            }
+        }
+        else
+        {
+            char[] inverted = new char[n];
 
-            if (!isNegative) {
+            for (int i = 0; i < n; i++)
+            {
+                inverted[i] = input[i] == '0' ? '1' : '0';
+            }
 
-                for (int i = 0; i < n; i++) {
-
-                    int bit = input[i] - '0'; 
-                    
-                    result += bit * (int)Math.Pow(2,n - i - 1); 
+            for (int i = n - 1; i >= 0; i--)
+            {
+                if (inverted[i] == '0')
+                {
+                    inverted[i] = '1';
+                    break;
+                }
+                else
+                {
+                    inverted[i] = '0';
                 }
             }
-            else {
-                
-                char[] inverted = new char[n];
 
-                for (int i = 0; i < n; i++) {
-                    inverted[i] = input[i] == '0' ? '1' : '0';
-                }
-
-                for (int i = n - 1; i >= 0; i--) {
-
-                    if (inverted[i] == '0') {
-                        inverted[i] = '1';
-                        break;
-                    }
-                    else {
-                        inverted[i] = '0';
-                    }
-                }
-
-                for (int i = 0; i < n; i++) {
-
-                    int bit = inverted[i] - '0';
-                    result += bit * (int)Math.Pow(2,n-i-1);
-                }
-
-                result *= -1;
+            for (int i = 0; i < n; i++)
+            {
+                int bit = inverted[i] - '0';
+                result += bit * (int)Math.Pow(2, n - i - 1);
             }
+
+            result *= -1;
+        }
 
         return result.ToString();
     }
